@@ -162,6 +162,8 @@ Browse to the enternal IP and verify the application is working
 
 ## Manage the Cluster
 
+Increase the node count from 2 to 3
+
 ```bash
 az aks scale --resource-group $resource_group --name $k8s_name --node-count 3
 ```
