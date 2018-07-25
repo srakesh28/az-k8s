@@ -167,3 +167,29 @@ Increase the node count from 2 to 3
 ```bash
 az aks scale --resource-group $resource_group --name $k8s_name --node-count 3
 ```
+
+Verify pods, and manually change the number of pods in the azure-vote-front deployment from 1 to 5
+
+```bash
+kubectl get pods
+
+kubectl scale --replicas=5 deployment/azure-vote-front
+
+kubectl get pods
+```
+
+Kubernetes supports horizontal pod autoscaling to adjust the number of pods in a deployment depending on CPU utilization or other select metrics. The Metrics Server is used to provide resource utilization to Kubernetes. To install the Metrics Server, clone the metrics-server GitHub repo and install the example resource definitions. To view the contents of these YAML definitions, see Metrics Server for Kuberenetes 1.8+.
+
+```bash
+git clone https://github.com/kubernetes-incubator/metrics-server.git
+
+kubectl create -f metrics-server/deploy/1.8+/
+```
+
+Autoscale the number of pods in the azure-vote-front deployment. Here, if CPU utilization exceeds 50%, the autoscaler increases the pods to a maximum of 10.
+
+```bash
+kubectl autoscale deployment azure-vote-front --cpu-percent=50 --min=3 --max=10
+
+kubectl get hpa
+```
