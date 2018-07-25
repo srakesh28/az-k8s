@@ -11,7 +11,6 @@ resource_group=k8s-jp-east
 location=japaneast
 k8s_name=k8s-cl01
 user_name=bot6
-storage_account=vmssnginx01storage
 ```
 
 Create the resource group for the deployment
