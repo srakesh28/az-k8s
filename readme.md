@@ -29,7 +29,12 @@ az aks get-versions --location $location
 Deploy the cluster
 
 ```bash
-az aks create --resource-group $resource_group --name $k8s_name --node-count 2 --generate-ssh-keys --kubernetes-version 1.10.5 --max-pods 1000 --enable-addons http_application_routing
+az aks create --resource-group $resource_group --name $k8s_name \
+    --node-count 2 \
+    --generate-ssh-keys \
+    --kubernetes-version 1.10.5 \
+    --max-pods 1000 \
+    --enable-addons http_application_routing
 ```
 
 ## Connect to the Cluster
