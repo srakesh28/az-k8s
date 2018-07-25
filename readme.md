@@ -2,7 +2,7 @@
 
 Content based on information from [Martin Jensen](https://kubecloud.io/kubernetes-dashboard-on-arm-with-rbac-61309310a640?gi=602d9419dcf) and [Pascal Naber](https://pascalnaber.wordpress.com/2018/06/17/access-dashboard-on-aks-with-rbac-enabled/)
 
-## Deploy an AKS (Managed Kubernetes) Cluster
+## Deploy an AKS (managed Kubernetes) Cluster
 
 Define the deployment variables used by the subsequent Azure CLI commands
 
@@ -51,7 +51,7 @@ Get access credentials for a managed Kubernetes cluster, store in .kube/config
 az aks get-credentials --resource-group $resource_group --name $k8s_name
 ```
 
-## Enable the kubernetes dashboard (Optional)
+## Enable the Kubernetes dashboard (Optional)
 
 >**CAUTION**: This configuration grants the cluster-admin role to the dashboard service account. This is for evaluation purposes only. Addition information on cluster [roles](https://kubernetes.io/docs/admin/authorization/rbac/#user-facing-roles)
 
