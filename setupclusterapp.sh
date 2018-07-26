@@ -17,7 +17,7 @@ user_name=bot6
 
 echo
 echo
-echo 'Deploy an application'
+echo 'Deploy an application the previously created AKS cluster'
 echo
 echo 'Create a file named azure-vote.yaml'
 echo
@@ -95,7 +95,7 @@ kubectl apply -f azure-vote.yaml
 
 echo
 echo
-echo 'Monitor the deployment, get the EXTERNAL-IP value from the output'
+echo 'Monitor the deployment, copy the EXTERNAL-IP value from the output'
 echo
 echo 'kubectl get service azure-vote-front --watch'
 read -n1 -r -p 'Press any key...' key
@@ -111,7 +111,7 @@ echo
 echo
 echo 'Manage the Cluster'
 echo
-echo 'Increase the node count from 2 to 3'
+echo 'Increase the cluster node count from 2 to 3'
 echo
 echo 'az aks scale --resource-group $resource_group --name $k8s_name --node-count 3'
 read -n1 -r -p 'Press any key...' key
@@ -163,7 +163,6 @@ echo
 echo 'Autoscale the number of pods in the azure-vote-front deployment. If CPU utilization exceeds 50%, the autoscaler increases the pods to a maximum of 10.'
 echo
 echo 'kubectl autoscale deployment azure-vote-front --cpu-percent=50 --min=3 --max=10'
-echo
 read -n1 -r -p 'Press any key...' key
 
 kubectl autoscale deployment azure-vote-front --cpu-percent=50 --min=3 --max=10
