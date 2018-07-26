@@ -7,10 +7,10 @@ Content based on information from [Martin Jensen](https://kubecloud.io/kubernete
 Define the deployment variables used by the subsequent Azure CLI commands
 
 ```bash
-resource_group=k8s-jp-east
+resource_group=[your resource group name]
 location=japaneast
-k8s_name=k8s-cl01
-user_name=bot6
+k8s_name=[your cluster name]
+user_name=[your login name]
 ```
 
 Create the resource group for the deployment
