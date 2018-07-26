@@ -14,7 +14,7 @@ k8sdemo17storage  - k8sdemo24storage
 japaneast
 
 k8s-demo-25 - k8s-demo-32
-k8sdemo17storage  - k8sdemo24storage
+k8sdemo25storage  - k8sdemo32storage
 canadaeast
 ```
 
